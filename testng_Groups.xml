@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+	<test name="Test">
+		<groups>
+			<run>
+				<include name="Smoke" />
+				<!-- comment: exclude name="Regression" -->
+			</run>
+		</groups>
+		<classes>
+			<class name="IncludeExcludeConcept.ClassPersonal" />
+
+			<class name="IncludeExcludeConcept.ClassHome">
+				<methods>
+					<include name="HomeLoanPunjab" />
+				</methods>
+			</class>
+
+			<class name="IncludeExcludeConcept.ClassGold">
+				<methods>
+					<include name="GoldLoanAxis" />
+				</methods>
+			</class>
+
+			<class name="IncludeExcludeConcept.ClassVehicle" />
+
+		</classes>
+	</test>
+</suite> 
